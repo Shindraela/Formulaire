@@ -1,28 +1,56 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+
+// const BonjourConnu = props => {
+//     return <p>Bonjour {props.nom}</p>;
+// };
+
+// const BonjourInconnu = props => {
+//     return <p>Bonjour étranger</p>;
+// };
+
+// const nombres = [1, 2, 3, 4];
+// const liste = nombres.map(n => <li>{n}</li>);
+// const liste = nombres.map((n, i) => <li key={i.toString()}>{n}</li>);
+
+const Item = props => {
+    return <li>{props.value}</li>;
+};
+
+const Liste = props => {
+    const nombres = props.nombres;
+    const liste = nombres.map((n, i) => <Item key={i.toString()} value={n} />);
+    return liste;
+};
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    // state = {
+    //     estAuthentifie: false
+    // };
+
+    render() {
+        // return <ul>{liste}</ul>;
+
+        return (
+            <ul>
+                <Liste nombres={[1, 2, 3, 4]} />
+            </ul>
+        );
+    }
+
+    // render() {
+    // 	// 1ere alternative
+    //     // if (this.state.estAuthentifie) {
+    //     //     return <BonjourConnu nom="Laurent" />;
+    //     // } else {
+    //     //     return <BonjourInconnu />;
+    // 	// }
+
+    // 	// 2e alternative
+    // 	// return (this.state.estAuthentifie) ? <BonjourConnu nom="Toto" /> : <BonjourInconnu />
+
+    // 	// 3e alternative
+    // 	return this.state.estAuthentifie && <BonjourConnu nom="Titi" />
+    // }
 }
 
 export default App;

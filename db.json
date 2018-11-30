@@ -1,0 +1,34 @@
+{
+  "utilisateurs": [
+    {
+      "civilite": "Mme",
+      "nom": "Koko",
+      "prenom": "Mitsuko",
+      "email": "koko.mitsuko@gmail.com",
+      "tel": "0653478952",
+      "framework": "angular",
+      "autre": "",
+      "id": 1
+    },
+    {
+      "civilite": "M",
+      "nom": "Miller",
+      "prenom": "Bobby",
+      "email": "miller.b@gmail.com",
+      "tel": "0689654235",
+      "framework": "angular",
+      "autre": "React",
+      "id": 2
+    },
+    {
+      "civilite": "M",
+      "nom": "Casez",
+      "prenom": "Rodriguez",
+      "email": "c.rod@gmail.com",
+      "tel": "0632987615",
+      "framework": "vue",
+      "autre": "",
+      "id": 3
+    }
+  ]
+}
